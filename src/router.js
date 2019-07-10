@@ -1,24 +1,26 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from './views/Home.vue'
+import Faster from './views/faster/faster.vue'
+import List from './views/list/list1.vue'
+// import Heather from './components/Heater.vue'
+// import Footer from './components/Footer.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: "/",
-      name: "home",
-      component: Home
+      path: '/faster',
+      component: Faster
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+      path: '/list',
+      component: List
+    },
+    {
+      path: '/home',
+      component: Home
     }
   ]
-});
+})
